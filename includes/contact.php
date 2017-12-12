@@ -1,14 +1,14 @@
 <?php
+if(isset($_POST['submit'])){
 	require 'vendor/autoload.php';
-
-	if (isset($_POST["submit"])) {
+	
+	$sendgrid = new SendGrid("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");
+	$email    = new SendGrid\Email();
+	
 		$name = $_POST['name'];
 		$email = $_POST['email'];
 		$message = $_POST['message'];
 		$human = intval($_POST['human']);
-		$from = 'edenilson.passos1@gmail.com'; 
-		$to = 'edenilson.passos@yahoo.com'; 
-		$subject = 'Message from Contact Portfolio ';
 		
 		$body = "From: $name\n E-Mail: $email\n Message:\n $message";
  
@@ -30,14 +30,17 @@
 		if ($human !== 5) {
 			$errHuman = 'Your anti-spam is incorrect';
 		}
- 
-// If there are no errors, send the email
-if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
-	if (mail ($to, $subject, $body, $from)) {
-		$result='<div class="alert alert-success">Thank You! I will be in touch</div>';
-	} else {
-		$result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
-	}
+		
+		if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
+			$email->addTo("app82900688@heroku.com")
+	    ->setFrom("edenilson.passos@yahoo.com")
+	    ->setSubject('$subject')
+	    ->setHtml('$body');
+			$sendgrid->send($email);
+			
+		}
+		$message = "User Updated!";
+      echo "<script type='text/javascript'>alert('$message');</script>";
+			
 }
-	}
 ?>
