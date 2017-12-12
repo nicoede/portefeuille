@@ -1,0 +1,68 @@
+section{
+    width: auto;
+    height: 100vh;
+    padding: 50px;
+}
+
+#about{
+    font-family: 'Shadows Into Light'; 
+    text-align: center;
+    margin-top: 600px;
+}
+
+#ep{
+    width: 400px;
+}
+
+#grades{
+    width: auto;
+    height: auto;
+    padding: 50px;
+}
+
+#icon{
+    margin-top: 3px;
+    margin-right: 20px;
+}
+
+#line{
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+#t-grades{
+    font-size: 20px;
+    text-align: center;
+}
+
+.cl_white{
+    font-family: 'Shadows Into Light';
+    color: black;
+}
+
+.work{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: 600px;
+    transition: opacity 1s ease-in-out;
+}
+
+.work:hover{
+    opacity: .55;
+}
+
+.col-text{
+    font-family: 'Shadows Into Light'; 
+    font-size: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.nav{
+    font-family: 'Shadows Into Light'; 
+    font-size:15px;
+}
