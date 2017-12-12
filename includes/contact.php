@@ -1,10 +1,12 @@
 <?php
+	require 'vendor/autoload.php';
+
 	if (isset($_POST["submit"])) {
 		$name = $_POST['name'];
 		$email = $_POST['email'];
 		$message = $_POST['message'];
 		$human = intval($_POST['human']);
-		$from = 'My Portfolio Contact'; 
+		$from = 'edenilson.passos1@gmail.com'; 
 		$to = 'edenilson.passos@yahoo.com'; 
 		$subject = 'Message from Contact Portfolio ';
 		
