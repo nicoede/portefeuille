@@ -1,24 +1,38 @@
-<?php 
+<?php
 include "includes/header.php";
-include "includes/contact.php";
-
+//include "includes/contact.php";
 require 'vendor/autoload.php';
+//Dotenv::load(__DIR__);
 
 if (isset($_POST["submit"])) {
-	$from = new SendGrid\Email("Example User", "noreply@smtp.sendgrid.net");
-	$subject = "Sending with SendGrid is Fun";
-	$to = new SendGrid\Email("Example User", "edenilson.passos@yahoo.com");
-	$content = new SendGrid\Content("text/plain", "and easy to do anywhere, even with PHP");
-	$mail = new SendGrid\Mail($from, $subject, $to, $content);
-	$apiKey = getenv('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');
-	$sg = new \SendGrid($apiKey);
-	$response = $sg->client->mail()->send()->post($mail);
-	echo $response->statusCode();
-	print_r($response->headers());
-	echo $response->body();
+    $sendgrid_username = $_ENV['app82900688@heroku.com'];
+    $sendgrid_password = $_ENV['ruhtj15h8987'];
+    $to                = $_ENV['edenilson.passos@yahoo.com'];
+    $transport  = Swift_SmtpTransport::newInstance('smtp.sendgrid.net', 587);
+    $transport->setUsername($sendgrid_username);
+    $transport->setPassword($sendgrid_password);
+    $mailer     = Swift_Mailer::newInstance($transport);
+    $message    = new Swift_Message();
+    $message->setTo($to);
+    $message->setFrom($to);
+    $message->setSubject("[smtp-php-example] Owl named %yourname%");
+    $message->setBody("%how% are you doing?");
+    $header           = new Smtpapi\Header();
+    $header->addSubstitution("%yourname%", array("Mr. Owl"));
+    $header->addSubstitution("%how%", array("Owl"));
+    $message_headers  = $message->getHeaders();
+    $message_headers->addTextHeader("x-smtpapi", $header->jsonString());
+    try {
+      $response = $mailer->send($message);
+      print_r($response);
+    } catch(\Swift_TransportException $e) {
+      print_r($e);
+      print_r('Bad username / password');
+    }
 }
-
 ?>
+
+
    <div id="page_effect" style="display:none;"> 
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <ul class="nav navbar-nav">
@@ -29,15 +43,19 @@ if (isset($_POST["submit"])) {
             <li><a href="#contact">Contact me</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <a href="#home">
-            <li id="icon"><img src="images/ep.png" alt="" width="70px;"></li>
-          </a>
+            <div class="wrapper">
+                 <a href="#home">
+                     <li id="icon"><img class="img-responsive" src="images/ep.png" alt="" width="70px;"></li>
+                 </a>
+             </div>
         </ul>
     </nav>
     
     <section id="home" style="background: url(images/header.jpg); background-size: 100% 100%;" class="cl_white text-center">
-        <h1><b> My Portfolio </b></h1><br>  
-        <img id="ep" src="images/ep.png" >
+        <h1><b> My Portfolio </b></h1><br>
+        <div class="wrapper">
+            <img id="ep" class="img-responsive" src="images/ep.png" style="margin-left: auto; margin-right: auto; width: 40%;" >
+        </div>
         <h1><b> Edenilson Jonatas dos Passos </b></h1>  
         <h1><b> Web Projects </b></h1>  
     </section>
@@ -65,28 +83,35 @@ if (isset($_POST["submit"])) {
         <div class="page-header">
             <h1>About me</h1>
         </div>
-        <div class="col-text">
-            <p>
-                Hello! My name is Edenilson Jonatas dos Passos and I am a computer scientist student from Brazil who really enjoy web development.
-                For the past several months I have been studying HTML, CSS, Bootstrap, Ruby on Rails, PHP and Javascript to really maximize my perfomrance as 
-                a web developper. In spite of having no formal job, I have been creating websites for fun involving several types of technologies. Aside from 
-                the ones I have mentioned, I had to work with database projects and management, that is, mySQL, phpmyadmin, MongoDB, postgreSQL and cleanDB 
-                from Heroku which is the service I use to deploy my projects. Furthermore, I have used amazon web services to store the images that the user 
-                upload to my websites, and for that I used the S3 tool. If you want to know more about my degree, you can click on 
-                <a href="includes/grades.php#grades">grades</a> to see what courses I have taken with their respective grades and duration.
-            
-            </p>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="col-text">
+                    <p>
+                        Hello! My name is Edenilson Jonatas dos Passos and I am a computer scientist student from Brazil who really enjoy web development.
+                        For the past several months I have been studying HTML, CSS, Bootstrap, Ruby on Rails, PHP and Javascript to really maximize my perfomrance as 
+                        a web developper. In spite of having no formal job, I have been creating websites for fun involving several types of technologies. Aside from 
+                        the ones I have mentioned, I had to work with database projects and management, that is, mySQL, phpmyadmin, MongoDB, postgreSQL and cleanDB 
+                        from Heroku which is the service I use to deploy my projects. Furthermore, I have used amazon web services to store the images that the user 
+                        upload to my websites, and for that I used the S3 tool. If you want to know more about my degree, you can click on 
+                        <a href="includes/grades.php#grades">grades</a> to see what courses I have taken with their respective grades and duration.
+                    
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img id="me" class="img-thumbnail img-responsive" src="images/me.jpg" style="margin-left: auto; margin-right: auto; width: 40%;" >
+            </div>
         </div>
         <br><br><br><br><br><br>
     </section>
-    </div>
+    
     
     <div class="col-text">
     <section id="contact" style="background: url(images/header.jpg); background-size: 100% 100%;" class="cl_white text-center">
         <div class="page-header">
             <h1>Contact me</h1>
         </div>
-        <form class="form-horizontal" role="form" method="post" action="index.php">
+        <form class="form-horizontal" role="form" method="post" action="">
         	<div class="form-group">
         		<label for="name" class="col-sm-2 control-label">Name</label>
         		<div class="col-sm-10">
@@ -117,7 +142,7 @@ if (isset($_POST["submit"])) {
         	</div>
         	<div class="form-group">
         		<div class="col-sm-10 col-sm-offset-2">
-        			<input id="submit" name="submit" type="submit" value="SEND" class="btn btn-primary btn-block">
+        			<!--<input id="submit" name="submit" type="submit" value="SEND" class="btn btn-primary btn-block btn-disabled">-->
         		</div>
         	</div>
         	<div class="form-group">
@@ -130,6 +155,7 @@ if (isset($_POST["submit"])) {
     </section>
     </div>
     
+    </div>
     </div>
     
     
