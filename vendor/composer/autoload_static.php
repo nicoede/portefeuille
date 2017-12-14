@@ -6,22 +6,17 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit035efde991efcd72a6808d44642c4c6c
 {
-    public static $files = array (
-        '3f8bdd3b35094c73a26f0106e3c0f8b2' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/SendGrid.php',
-        '9dda55337a76a24e949fbcc5d905a2c7' => __DIR__ . '/..' . '/sendgrid/sendgrid/lib/helpers/mail/Mail.php',
-    );
-
     public static $prefixLengthsPsr4 = array (
-        'S' => 
+        'P' => 
         array (
-            'SendGrid\\' => 9,
+            'PHPMailer\\PHPMailer\\' => 20,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'SendGrid\\' => 
+        'PHPMailer\\PHPMailer\\' => 
         array (
-            0 => __DIR__ . '/..' . '/sendgrid/php-http-client/lib',
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
     );
 

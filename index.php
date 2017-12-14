@@ -1,40 +1,12 @@
 <?php
 include "includes/header.php";
-//include "includes/contact.php";
-require 'vendor/autoload.php';
-//Dotenv::load(__DIR__);
-
-if (isset($_POST["submit"])) {
-    $sendgrid_username = $_ENV['app82900688@heroku.com'];
-    $sendgrid_password = $_ENV['ruhtj15h8987'];
-    $to                = $_ENV['edenilson.passos@yahoo.com'];
-    $transport  = Swift_SmtpTransport::newInstance('smtp.sendgrid.net', 587);
-    $transport->setUsername($sendgrid_username);
-    $transport->setPassword($sendgrid_password);
-    $mailer     = Swift_Mailer::newInstance($transport);
-    $message    = new Swift_Message();
-    $message->setTo($to);
-    $message->setFrom($to);
-    $message->setSubject("[smtp-php-example] Owl named %yourname%");
-    $message->setBody("%how% are you doing?");
-    $header           = new Smtpapi\Header();
-    $header->addSubstitution("%yourname%", array("Mr. Owl"));
-    $header->addSubstitution("%how%", array("Owl"));
-    $message_headers  = $message->getHeaders();
-    $message_headers->addTextHeader("x-smtpapi", $header->jsonString());
-    try {
-      $response = $mailer->send($message);
-      print_r($response);
-    } catch(\Swift_TransportException $e) {
-      print_r($e);
-      print_r('Bad username / password');
-    }
-}
+include "includes/contact.php";
 ?>
 
 
-   <div id="page_effect" style="display:none;"> 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+   <div id="page_effect" style="display:none;">
+    <div id="content" style="margin-top: 5px;"> 
+    <nav id="nave" class="navbar navbar-inverse navbar-fixed-top" style="overflow: hidden;">
         <ul class="nav navbar-nav">
             <li><a href="#home">Home</a></li>
             <li><a href="#work">What I do</a></li>
@@ -45,7 +17,7 @@ if (isset($_POST["submit"])) {
         <ul class="nav navbar-nav navbar-right">
             <div class="wrapper">
                  <a href="#home">
-                     <li id="icon"><img class="img-responsive" src="images/ep.png" alt="" width="70px;"></li>
+                     
                  </a>
              </div>
         </ul>
@@ -88,11 +60,11 @@ if (isset($_POST["submit"])) {
                 <div class="col-text">
                     <p>
                         Hello! My name is Edenilson Jonatas dos Passos and I am a computer scientist student from Brazil who really enjoy web development.
-                        For the past several months I have been studying HTML, CSS, Bootstrap, Ruby on Rails, PHP and Javascript to really maximize my perfomrance as 
+                        For the past several months I have been studying HTML, CSS, Bootstrap, Ruby on Rails, PHP and Javascript to really maximize my performance as 
                         a web developper. In spite of having no formal job, I have been creating websites for fun involving several types of technologies. Aside from 
                         the ones I have mentioned, I had to work with database projects and management, that is, mySQL, phpmyadmin, MongoDB, postgreSQL and cleanDB 
-                        from Heroku which is the service I use to deploy my projects. Furthermore, I have used amazon web services to store the images that the user 
-                        upload to my websites, and for that I used the S3 tool. If you want to know more about my degree, you can click on 
+                        from Heroku which is the service I use to deploy my projects. Furthermore, I have used amazon web services to store the images that users 
+                        upload to my websites, and for that I have used the S3 tool. If you want to know more about my degree, you can click on 
                         <a href="includes/grades.php#grades">grades</a> to see what courses I have taken with their respective grades and duration.
                     
                     </p>
@@ -111,7 +83,7 @@ if (isset($_POST["submit"])) {
         <div class="page-header">
             <h1>Contact me</h1>
         </div>
-        <form class="form-horizontal" role="form" method="post" action="">
+        <form class="form-horizontal" role="form" method="post" action="index.php#contact">
         	<div class="form-group">
         		<label for="name" class="col-sm-2 control-label">Name</label>
         		<div class="col-sm-10">
@@ -142,7 +114,7 @@ if (isset($_POST["submit"])) {
         	</div>
         	<div class="form-group">
         		<div class="col-sm-10 col-sm-offset-2">
-        			<!--<input id="submit" name="submit" type="submit" value="SEND" class="btn btn-primary btn-block btn-disabled">-->
+        			<input id="submit" name="submit" type="submit" value="SEND" class="btn btn-primary btn-block btn-disabled">
         		</div>
         	</div>
         	<div class="form-group">
@@ -157,7 +129,7 @@ if (isset($_POST["submit"])) {
     
     </div>
     </div>
-    
+    </div>
     
 </body>
 </html>
