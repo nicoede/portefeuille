@@ -51,7 +51,7 @@ include "includes/contact.php";
         
         <h1 style="font-family: 'Shadows Into Light'; text-align: left;"> Mes Recettes </h1><br>
         <p class="col-text">Mes Recettes is a project that I have developped in Ruby on Rails. You will be able to register create new recipes, edit them as necessary, rate other recipes and more as can be seen in the link below:</p>
-        <a target="_blank" href="https://myrecipesnicoede.herokuapp.com/"><img src="images/p2.png" alt="mesrecettes" class="work img-thumbnail" style="margin-bottom:100px;"></a>
+        <a target="_blank" href="https://myrecipesnicoede.herokuapp.com/"><img src="images/p2.png" alt="mesrecettes" class="work img-thumbnail" ></a>
     </section>
     
     <section id="about" style="background: url(images/header.jpg); background-size: 100% 100%;" class="cl_white text-center">
@@ -69,7 +69,7 @@ include "includes/contact.php";
                         from Heroku which is the service I use to deploy my projects. Furthermore, I have used amazon web services to store the images that users 
                         upload to my websites, and for that I have used the S3 tool. If you want to know more about my degree, you can click on 
                         <a href="includes/grades.php#grades">grades</a> to see what courses I have taken with their respective grades and duration.
-                    
+                        <br><br>
                     </p>
                 </div>
             </div>
@@ -80,7 +80,7 @@ include "includes/contact.php";
                 <a href="https://www.linkedin.com/in/edenilson-j-dos-passos/"><img class="img-responsive" src="images/linkedin.png" style="margin-left: auto; margin-right: auto; width: 5%;" ></a>
             </div>
         </div>
-        <br><br><br><br>
+
     </section>
     
     
