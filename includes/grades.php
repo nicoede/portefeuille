@@ -17,19 +17,26 @@
 <body data-spy="scroll" data-target=".navbar">
 	
    <div id="page_effect" style="display:none;">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <ul class="nav navbar-nav">
-            <li><a href="../index.php#home">Home</a></li>
+    <nav id="nave" class="navbar navbar-inverse navbar-fixed-top" style="margin-bottom: -20px;">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>                        
+          </button>
+          <a class="active navbar-brand" style="font-family: 'Shadows Into Light';" href="#home">Home</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+        	<li class="dropdown">
+        	<li><a href="../index.php#home">Home</a></li>
             <li><a href="../index.php#work">What I do</a></li>
             <li><a href="../index.php#about">About me</a></li>
             <li><a href="#grades">Grades</a></li>
             <li><a href="../index.php#contact">Contact me</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <a href="#home">
-            <li id="icon"><img class="img-responsive" src="../images/ep.png" alt="" width="70px;"></li>
-          </a>
-        </ul>
+        	</li>
+          </ul>
+        </div>
     </nav>
     
      <section id="grades" style="background: url(../images/header.jpg); background-size: 100% 100%;" class="cl_white text-center">

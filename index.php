@@ -4,23 +4,26 @@ include "includes/contact.php";
 ?>
 
 
-   <div id="page_effect" style="display:none;">
-    <div id="content" style="margin-top: 5px;"> 
-    <nav id="nave" class="navbar navbar-inverse navbar-fixed-top" style="overflow: hidden;">
-        <ul class="nav navbar-nav">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#work">What I do</a></li>
-            <li><a href="#about">About me</a></li>
-            <li><a target="_blank" href="includes/grades.php#grades">Grades</a></li>
-            <li><a href="#contact">Contact me</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <div class="wrapper">
-                 <a href="#home">
-                     
-                 </a>
-             </div>
-        </ul>
+<div id="page_effect" style="display:none;">
+   <nav id="nave" class="navbar navbar-inverse navbar-fixed-top" style="margin-bottom: -20px;">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>                        
+          </button>
+          <a class="active navbar-brand" style="font-family: 'Shadows Into Light';" href="#home">Home</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+        	<li class="dropdown">
+        	<li><a href="#work">What I do</a></li>
+        	<li><a href="#about">About me</a></li>
+        	<li><a target="_blank" href="includes/grades.php#grades">Grades</a></li>
+        	<li><a href="#contact">Contact Me</a></li>
+        	</li>
+          </ul>
+        </div>
     </nav>
     
     <section id="home" style="background: url(images/header.jpg); background-size: 100% 100%;" class="cl_white text-center">
@@ -71,14 +74,23 @@ include "includes/contact.php";
                 </div>
             </div>
             <div class="col-md-6">
-                <img id="me" class="img-thumbnail img-responsive" src="images/me.jpg" style="margin-left: auto; margin-right: auto; width: 40%;" >
+                <img id="me" class="img-thumbnail img-responsive" src="images/me.jpg" style="margin-left: auto; margin-right: auto; width: 40%;">
+                <p style="font-size: 20px;">Phone: +64 027 508 7707</p>
+                <div class="row">
+                    <div class="col-md-6">
+                    <a href="https://github.com/nicoede"><img class="img-responsive" src="images/git.png" style="margin-left: auto; margin-right: 0; width: 14%;" ></a>
+                    </div>
+                    <div class="col-md-6">
+                    <a href="https://www.linkedin.com/in/edenilson-j-dos-passos/"><img class="img-responsive" src="images/linkedin.png" style="margin-left: 0; margin-right: auto; width: 14%;" ></a>
+                    </div>
+                </div>
             </div>
         </div>
-        <br><br><br><br><br><br>
+        <br><br><br>
     </section>
     
     
-    <div class="col-text">
+    <div class="col-text" style="margin-right: auto; margin-left: auto;">
     <section id="contact" style="background: url(images/header.jpg); background-size: 100% 100%;" class="cl_white text-center">
         <div class="page-header">
             <h1>Contact me</h1>
@@ -125,8 +137,6 @@ include "includes/contact.php";
         </form>
         <?php include "includes/footer.php" ?>
     </section>
-    </div>
-    
     </div>
     </div>
     </div>
