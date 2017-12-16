@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../style/nico.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+    <link rel="icon" href="../images/ep.png">
     <!-- Jquery -->
     <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.js"></script>
