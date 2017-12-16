@@ -22,6 +22,8 @@ section{
     background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
+
+
 #t-grades{
     font-size: 20px;
     text-align: center;
@@ -37,6 +39,10 @@ section{
     font-size: 20px;
     text-align: justify;
     text-justify: inter-word;
+}
+
+.container{
+   display:table;
 }
 
 .nav{
