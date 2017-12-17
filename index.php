@@ -50,7 +50,7 @@ include "includes/contact.php";
         <hr>
         
         <h1 style="font-family: 'Shadows Into Light'; text-align: left;"> Cooking With Nico </h1><br>
-        <p class="col-text"Cooking With Nico is a project that I have developped in Ruby on Rails. You will be able to register create new recipes, edit them as necessary, rate other recipes and more as can be seen in the link below:</p>
+        <p class="col-text"> Cooking With Nico is a project that I have developped in Ruby on Rails. You will be able to register create new recipes, edit them as necessary, rate other recipes and more as can be seen in the link below:</p>
         <a target="_blank" href="https://cookingwithnico.herokuapp.com/"><img src="images/p3.png" alt="Cooking With Nico" class="work img-thumbnail" ></a>
     </section>
     
