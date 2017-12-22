@@ -76,8 +76,16 @@ include "includes/contact.php";
             <div class="col-md-6">
                 <img id="me" class="img-thumbnail img-responsive" src="images/me.jpg" style="margin-left: auto; margin-right: auto; width: 40%;">
                 <p style="font-size: 20px;">Phone: +64 027 508 7707</p>
-                <a href="https://github.com/nicoede"><img class="img-responsive" src="images/git.png" style="margin-left: auto; margin-right: auto; width: 5%;" ></a><br>
-                <a href="https://www.linkedin.com/in/edenilson-j-dos-passos/"><img class="img-responsive" src="images/linkedin.png" style="margin-left: auto; margin-right: auto; width: 5%;" ></a>
+            </div>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-1">
+                <a href="https://github.com/nicoede"><img class="img-responsive" src="images/git.png" style="margin-left: auto; margin-right: auto; width: 35px;" ></a><br>
+            </div>
+            <div class="col-md-1">
+                <a href="https://www.linkedin.com/in/edenilson-j-dos-passos/"><img class="img-responsive" src="images/linkedin.png" style="margin-left: auto; margin-right: auto; width: 35px;" ></a>
             </div>
         </div>
 

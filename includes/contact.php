@@ -21,7 +21,7 @@ function send_mail($subject1, $body1){
         $mail->Port = 587;                                    // TCP port to connect to
     
         //Recipients
-        $mail->setFrom('no-reply@howcode.org', 'Mailer');
+        $mail->setFrom('no-reply@cms.org', 'Mailer');
         $mail->addAddress('edenilson.passos@yahoo.com', 'Joe User');     // Add a recipient
     
         //Content
