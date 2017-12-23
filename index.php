@@ -40,7 +40,7 @@ include "includes/contact.php";
             <h1 style="font-family: 'Shadows Into Light'; text-align: center;"> My Work </h1>
         </div>
         <h1 style="font-family: 'Shadows Into Light'; text-align: left;"> My CMS </h1><br>
-        <p class="col-text">My CMS is a project in order to show off my skills with PHP in a more advanced system involving several functionalities such as creating a new user, creating posts, editing posts, deleting posts, commenting, approving the comment, creating categories, filtering and more. The site can be accessed clicking the image below. If you are intersted in the full functionality of the site, you will need the admin login, that is:</p>
+        <p class="col-text">My CMS is a project in order to show off my skills with PHP in a more advanced system involving several functionalities such as creating a new user, creating posts, editing posts, deleting posts, commenting, approving the comment, creating categories, filtering and more. The site can be accessed clicking the image below. There are several rubish posts just to show off the pagination system. If you are intersted in the full functionality of the site, you will need the admin login, that is:</p>
         <ul class="col-text">
             <li>Username: nicoede</li>
             <li>Password: 123</li>
