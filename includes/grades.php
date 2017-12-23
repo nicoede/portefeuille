@@ -25,12 +25,11 @@
         	<span class="icon-bar"></span>
         	<span class="icon-bar"></span>                        
           </button>
-          <a class="active navbar-brand" style="font-family: 'Shadows Into Light';" href="#home">Home</a>
+          <a class="active navbar-brand" style="font-family: 'Shadows Into Light';" href="../index.php#home">Home</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
         	<li class="dropdown">
-        	<li><a href="../index.php#home">Home</a></li>
             <li><a href="../index.php#work">What I do</a></li>
             <li><a href="../index.php#about">About me</a></li>
             <li><a href="#grades">Grades</a></li>
@@ -202,7 +201,7 @@
 						<tr>
 							<td>Algorithms Complexity</td>
 							<td>72</td>
-							<td>500</td>
+							<td>7.1</td>
 						</tr>
 						<tr>
 							<td>Paradigms of Programming</td>
