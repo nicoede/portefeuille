@@ -56,7 +56,7 @@ include "includes/contact.php";
         <p class="col-text"> Cooking With Nico is a project that I have developped in Ruby on Rails. You will be able to register create new recipes, edit them as necessary, 
         rate other recipes and more as can be seen in the link below. As an admin you will be able to edit other recipes as you wish.</p>
         <ul class="col-text">
-            <li>Username: nicoede</li>
+            <li>Email: edenilson.passos@yahoo.com</li>
             <li>Password: 123</li>
         </ul>
         <a target="_blank" href="https://cookingwithnico.herokuapp.com/"><img src="images/p3.png" alt="Cooking With Nico" class="work img-thumbnail" ></a>
