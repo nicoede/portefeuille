@@ -39,8 +39,11 @@ include "includes/contact.php";
         <div class="page-header">
             <h1 style="font-family: 'Shadows Into Light'; text-align: center;"> My Work </h1>
         </div>
-        <h1 style="font-family: 'Shadows Into Light'; text-align: left;"> My CMS </h1><br>
-        <p class="col-text">My CMS is a project in order to show off my skills with PHP in a more advanced system involving several functionalities such as creating a new user, creating posts, editing posts, deleting posts, commenting, approving the comment, creating categories, filtering and more. The site can be accessed clicking the image below. There are several rubish posts just to show off the pagination system. If you are intersted in the full functionality of the site, you will need the admin login, that is:</p>
+        <h1 class="work_items"> My CMS </h1><br>
+        <p class="col-text">My CMS is a project in order to show off my skills with PHP in a more advanced system involving several functionalities such as creating a new user, 
+        creating posts, editing posts, deleting posts, commenting, approving the comment, creating categories, filtering and more. The site can be accessed clicking the image
+        below. There are several rubish posts just to show off the pagination system. If you are intersted in the full functionality of the site, you will need the admin login,
+        that is:</p>
         <ul class="col-text">
             <li>Username: nicoede</li>
             <li>Password: 123</li>
@@ -49,9 +52,22 @@ include "includes/contact.php";
 
         <hr>
         
-        <h1 style="font-family: 'Shadows Into Light'; text-align: left;"> Cooking With Nico </h1><br>
-        <p class="col-text"> Cooking With Nico is a project that I have developped in Ruby on Rails. You will be able to register create new recipes, edit them as necessary, rate other recipes and more as can be seen in the link below:</p>
+        <h1 class="work_items"> Cooking With Nico </h1><br>
+        <p class="col-text"> Cooking With Nico is a project that I have developped in Ruby on Rails. You will be able to register create new recipes, edit them as necessary, 
+        rate other recipes and more as can be seen in the link below:</p>
         <a target="_blank" href="https://cookingwithnico.herokuapp.com/"><img src="images/p3.png" alt="Cooking With Nico" class="work img-thumbnail" ></a>
+        
+        <hr>
+        
+        <h1 class="work_items"> Nico's Boutique </h1><br>
+        <p class="col-text"> Nico's Boutique is still in development, however, the admin functions are all functional. The technologies that I am using to build this website 
+        are HMTL, CSS, PHP, javascript, Jquery and Ajax. As the admin you can monitor all users, make them admins or subscribers, register new products, register new brands, create new categories, edit the existing ones,
+        filter products by sex, brand, category and much more. If you want the complete experience, the admin login is written below:</p>
+        <ul class="col-text">
+            <li>Username: nicoede</li>
+            <li>Password: 123</li>
+        </ul>
+        <a target="_blank" href="https://nicosboutique.herokuapp.com/"><img src="images/nb.png" alt="Nico's Boutique" class="work img-thumbnail" ></a>
     </section>
     
     <section id="about" style="background: url(images/header.jpg); background-size: 100% 100%;" class="cl_white text-center">
@@ -82,10 +98,10 @@ include "includes/contact.php";
             <div class="col-md-1">
             </div>
             <div class="col-md-1">
-                <a href="https://github.com/nicoede"><img class="img-responsive" src="images/git.png" style="margin-left: auto; margin-right: auto; width: 35px;" ></a><br>
+                <a target="_blank" href="https://github.com/nicoede"><img class="img-responsive" src="images/git.png" style="margin-left: auto; margin-right: auto; width: 35px;" ></a><br>
             </div>
             <div class="col-md-1">
-                <a href="https://www.linkedin.com/in/edenilson-j-dos-passos/"><img class="img-responsive" src="images/linkedin.png" style="margin-left: auto; margin-right: auto; width: 35px;" ></a>
+                <a target="_blank" href="https://www.linkedin.com/in/edenilson-j-dos-passos/"><img class="img-responsive" src="images/linkedin.png" style="margin-left: auto; margin-right: auto; width: 35px;" ></a>
             </div>
         </div>
 
