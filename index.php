@@ -95,7 +95,7 @@ include "includes/contact.php";
             </div>
             <div class="col-md-6">
                 <img id="me" class="img-thumbnail img-responsive" src="images/me.jpg" style="margin-left: auto; margin-right: auto; width: 40%;">
-                <p style="font-size: 20px;">Phone: +64 027 508 7707</p>
+                <p style="font-size: 20px;">Phone: +55 47 9 9969 6782</p>
             </div>
             <div class="col-md-1">
             </div>
